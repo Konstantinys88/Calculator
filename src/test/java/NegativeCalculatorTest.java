@@ -11,25 +11,25 @@ public class NegativeCalculatorTest {
 
         String[][] data = new String[4][4];
 
-        data[0][0] = "0";
-        data[1][0] = "1";
-        data[2][0] = "0";
-        data[3][0] = "0";
+//        data[0][0] = "200";
+//        data[1][0] = "100";
+//        data[2][0] = "0";
+//        data[3][0] = "0";
 
         data[0][1] = "+";
         data[1][1] = "-";
         data[2][1] = "*";
         data[3][1] = "/";
 
-        data[0][2] = "4";
-        data[1][2] = "4";
-        data[2][2] = "4";
-        data[3][2] = "4";
+        data[0][2] = "101";
+        data[1][2] = "-1";
+        data[2][2] = "101";
+        data[3][2] = "101";
 
-        data[0][3] = "4";
-        data[1][3] = "4";
-        data[2][3] = "4";
-        data[3][3] = "4";
+        data[0][3] = "-1";
+        data[1][3] = "0";
+        data[2][3] = "-200";
+        data[3][3] = "-1";
 
         return data;
     }
