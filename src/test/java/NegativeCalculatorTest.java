@@ -6,31 +6,17 @@ import org.testng.annotations.Test;
 public class NegativeCalculatorTest {
 
     @DataProvider
-    public static Object[][] negativeDataProvider(){
+    public static Object[][] negativeDataProvider() throws Exception {
+        Object[][] data = {new Object[]{"5.0", "+", "2", "2"},
+                new Object[]{"0.0", "-", "100", "100"}};
 
-        String[][] data = new String[4][4];
-
-        data[0][1] = "+";
-        data[1][1] = "-";
-        data[2][1] = "*";
-        data[3][1] = "делить";
-
-        data[0][2] = "null";
-        data[1][2] = "one";
-        data[2][2] = "1";
-        data[3][2] = "1";
-
-        data[0][3] = "null";
-        data[1][3] = "two";
-        data[2][3] = "0";
-        data[3][3] = "1";
 
         return data;
     }
 
     @Test(dataProvider = "negativeDataProvider")
-    public void negativeTest(String result, String[] arr){
-            Assert.assertEquals(result, Calculator.execute(arr));
+    public void negativeTest(String result, String[] arr) {
+        Assert.assertNotEquals(result, Calculator.execute(arr));
 
 
     }
