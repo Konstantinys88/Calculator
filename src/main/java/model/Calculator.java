@@ -23,8 +23,8 @@ public class Calculator {
                     result = Double.parseDouble(params[1]) / Double.parseDouble(params[2]);
                     break;
                 default:
-                    new CalculatorException();
-                    break;
+                    throw new CalculatorException();
+
             }
             System.out.println("Результат вычисления равен " + result);
             return (String.valueOf(result));
