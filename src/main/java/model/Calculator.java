@@ -6,7 +6,7 @@ public class Calculator {
         if (Double.parseDouble(params[1]) > 100 | Double.parseDouble(params[1]) < 0 |
                 Double.parseDouble(params[2]) > 100 | Double.parseDouble(params[2]) < 0 ) {
             System.out.println("Error! Вы вышли за пределы допустимых значений");
-            System.out.println(new CalculatorException());
+            new CalculatorException();
             return "Error!";
         } else {
             double result = 0;
