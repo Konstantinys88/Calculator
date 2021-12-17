@@ -8,7 +8,7 @@ public class Calculator {
             System.out.println("Error! Вы вышли за пределы допустимых значений");
             throw new CalculatorException();
         } else {
-            double result = 0;
+            double result;
             switch (params[0]) {
                 case ("+"):
                     result = Double.parseDouble(params[1]) + Double.parseDouble(params[2]);

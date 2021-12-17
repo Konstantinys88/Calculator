@@ -6,11 +6,9 @@ import org.testng.annotations.Test;
 public class NegativeCalculatorTest {
 
     @DataProvider
-    public static Object[][] negativeDataProvider() throws Exception {
+    public static Object[][] negativeDataProvider(){
         Object[][] data = {new Object[]{"5.0", "+", "2", "2"},
                 new Object[]{"0.0", "-", "100", "100"}};
-
-
         return data;
     }
 
