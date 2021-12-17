@@ -17,8 +17,8 @@ public class PositiveCalculatorTest {
     }
 
     @Test(dataProvider = "positiveDataProvider")
-    public void positiveTest(String operator, String valueOne, String valueTwo,String result){
-        Assert.assertEquals(result, Calculator.execute(valueOne,operator,valueTwo));
+    public void positiveTest(String result,String[]arr){
+        Assert.assertEquals(result, Calculator.execute(arr));
     }
 }
 

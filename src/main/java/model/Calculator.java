@@ -1,24 +1,24 @@
 package model;
 public class Calculator {
 
-    public static String execute(String valueOne, String operator,String valueTwo) {
+    public static String execute(String [] params) {
         int result = 0;
-        switch (operator){
-            case ("+"): result = Integer.parseInt(valueOne) +  Integer.parseInt(valueTwo);
+            switch (params[0]){
+            case ("+"): result = Integer.parseInt(params[1]) +  Integer.parseInt(params[2]);
                 break;
-            case ("-"): result = Integer.parseInt(valueOne) -  Integer.parseInt(valueTwo);
+            case ("-"): result = Integer.parseInt(params[1]) -  Integer.parseInt(params[2]);
                 break;
-            case ("*"): result = Integer.parseInt(valueOne) *  Integer.parseInt(valueTwo);
+            case ("*"): result = Integer.parseInt(params[1]) *  Integer.parseInt(params[2]);
                 break;
-            case ("/"): result = Integer.parseInt(valueOne) /  Integer.parseInt(valueTwo);
+            case ("/"): result = Integer.parseInt(params[1]) /  Integer.parseInt(params[2]);
                 break;
-            case ("%"): result = Integer.parseInt(valueOne) %  Integer.parseInt(valueTwo);
+            case ("%"): result = Integer.parseInt(params[1]) %  Integer.parseInt(params[2]);
                 break;
-            case ("^"): result = (int) Math.pow(Integer.parseInt(valueOne),Integer.parseInt(valueTwo));
+            case ("^"): result = (int) Math.pow(Integer.parseInt(params[1]),Integer.parseInt(params[2]));
                 break;
             default:
-                System.out.println("Error!");
-                break;
+               new CalculatorException();
+               break;
         }
         System.out.println("Результат вычисления равен " + result);
         return Integer.toString(result);
