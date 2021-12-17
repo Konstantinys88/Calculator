@@ -1,15 +1,8 @@
 package model;
-
-import java.util.Scanner;
-
 public class Calculator {
 
-    public static String execute(String[] param) {
-        Scanner scanner = new Scanner(System.in);
+    public static String execute(String valueOne, String operator,String valueTwo) {
         int result = 0;
-        String valueOne = scanner.next();
-        String operator = scanner.next();
-        String valueTwo = scanner.next();
         switch (operator){
             case ("+"): result = Integer.parseInt(valueOne) +  Integer.parseInt(valueTwo);
                 break;
@@ -27,10 +20,8 @@ public class Calculator {
                 System.out.println("Error!");
                 break;
         }
-
-        System.out.println("Результат вычисления равен");
-        System.out.println(result);
-        return null;
+        System.out.println("Результат вычисления равен " + result);
+        return Integer.toString(result);
     }
 
 }

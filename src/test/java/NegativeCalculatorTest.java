@@ -17,7 +17,7 @@ public class NegativeCalculatorTest {
 
     @Test(dataProvider = "negativeDataProvider")
     public void negativeTest(String operator, String valueOne, String valueTwo,String result){
-        Assert.assertEquals(result, Calculator.execute());
+        Assert.assertNotEquals(result, Calculator.execute(valueOne,operator,valueTwo));
     }
 
 
