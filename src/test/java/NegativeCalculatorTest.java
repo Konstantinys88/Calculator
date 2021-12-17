@@ -1,4 +1,5 @@
 import model.Calculator;
+import model.CalculatorException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,24 +14,24 @@ public class NegativeCalculatorTest {
         data[0][1] = "+";
         data[1][1] = "-";
         data[2][1] = "*";
-        data[3][1] = "/";
+        data[3][1] = "делить";
 
-        data[0][2] = "-10";
-        data[1][2] = "-1";
-        data[2][2] = "101";
-        data[3][2] = "101";
+        data[0][2] = "null";
+        data[1][2] = "one";
+        data[2][2] = "1";
+        data[3][2] = "1";
 
-        data[0][3] = "1";
-        data[1][3] = "0";
-        data[2][3] = "-200";
-        data[3][3] = "-1";
+        data[0][3] = "null";
+        data[1][3] = "two";
+        data[2][3] = "0";
+        data[3][3] = "1";
 
         return data;
     }
 
-    @Test(dataProvider = "negativeDataProvider")
+    @Test(dataProvider = "negativeDataProvider",expectedExceptions = CalculatorException.class)
     public void negativeTest(String result, String[] arr){
-      Assert.assertNotEquals(result, Calculator.execute(arr));
+      Assert.assertEquals(result, Calculator.execute(arr));
     }
 
 

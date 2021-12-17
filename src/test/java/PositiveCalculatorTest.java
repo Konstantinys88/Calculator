@@ -9,25 +9,25 @@ public class PositiveCalculatorTest {
     public static Object[][] positiveDataProvider() {
         String[][] data = new String[4][4];
 
-        data[0][0] = "200.0";
-        data[1][0] = "0.0";
-        data[2][0] = "10000.0";
-        data[3][0] = "10.0";
+        data[0][0] = "5.0";
+        data[1][0] = "2.4";
+        data[2][0] = "9.6";
+        data[3][0] = "0.6666666666666666";
 
         data[0][1] = "+";
         data[1][1] = "-";
         data[2][1] = "*";
         data[3][1] = "/";
 
-        data[0][2] = "100";
-        data[1][2] = "100";
-        data[2][2] = "100";
-        data[3][2] = "100";
+        data[0][2] = "2";
+        data[1][2] = "-0.0";
+        data[2][2] = "2";
+        data[3][2] = "2";
 
-        data[0][3] = "100";
-        data[1][3] = "100";
-        data[2][3] = "100";
-        data[3][3] = "10";
+        data[0][3] = "3";
+        data[1][3] = "-2.4";
+        data[2][3] = "4.8";
+        data[3][3] = "3";
 
         return data;
     }
