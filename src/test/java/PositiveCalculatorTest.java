@@ -34,7 +34,7 @@ public class PositiveCalculatorTest {
         return data;
     }
 
-    @Test(dataProvider = "positiveDataProvider",expectedExceptions = CalculatorException.class)
+    @Test(dataProvider = "positiveDataProvider")
     public void positiveTest(String result, String[] arr) {
         Assert.assertEquals(result, Calculator.execute(arr));
     }
