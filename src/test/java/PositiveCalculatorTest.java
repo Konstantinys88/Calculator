@@ -1,5 +1,6 @@
 
 import model.Calculator;
+import model.CalculatorException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -33,7 +34,7 @@ public class PositiveCalculatorTest {
         return data;
     }
 
-    @Test(dataProvider = "positiveDataProvider")
+    @Test(dataProvider = "positiveDataProvider",expectedExceptions = CalculatorException.class)
     public void positiveTest(String result, String[] arr) {
         Assert.assertEquals(result, Calculator.execute(arr));
     }

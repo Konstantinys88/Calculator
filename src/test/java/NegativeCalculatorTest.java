@@ -31,7 +31,7 @@ public class NegativeCalculatorTest {
 
     @Test(dataProvider = "negativeDataProvider", expectedExceptions = CalculatorException.class)
     public void negativeTest(String result, String[] arr){
-      Assert.assertNotEquals(result, Calculator.execute(arr));
+      Assert.assertEquals(result, Calculator.execute(arr));
     }
 
 
