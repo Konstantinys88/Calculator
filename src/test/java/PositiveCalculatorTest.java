@@ -8,12 +8,12 @@ public class PositiveCalculatorTest {
 
     @DataProvider
     public static Object[][] positiveDataProvider(){
-        return new String[][]{
+        return new Object[][]{
                 {"+","4","4","8"},
                 {"-","4","4","0"},
                 {"*","4","4","16"},
                 {"/","4","4","1"},
-        };
+          };
     }
 
     @Test(dataProvider = "positiveDataProvider")

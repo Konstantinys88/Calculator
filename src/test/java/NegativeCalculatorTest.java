@@ -1,4 +1,5 @@
 import model.Calculator;
+import model.CalculatorException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,9 +16,9 @@ public class NegativeCalculatorTest {
         };
     }
 
-    @Test(dataProvider = "negativeDataProvider")
+    @Test(dataProvider = "negativeDataProvider", expectedExceptions = CalculatorException.class)
     public void negativeTest(){
-        //Assert.assertEquals(Calculator.execute());
+      //  Assert.assertEquals(Calculator.execute());
     }
 
 
