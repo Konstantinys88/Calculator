@@ -9,7 +9,6 @@ public class Calculator {
             throw new CalculatorException();
         } else {
             double result;
-            //char a = params[0].charAt(0);
             switch (params[0]) {
                 case ("+"):
                     result = Double.parseDouble(params[1]) + Double.parseDouble(params[2]);

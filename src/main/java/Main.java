@@ -9,19 +9,9 @@ public class Main {
 
         args = new String[3];
 
-
-            args[0] = in.next();
-
-        if (in.hasNextDouble()) {
-            args[1] = in.next();
-        } else {
-            throw new CalculatorException();
-        }
-        if (in.hasNextDouble()) {
-            args[2] = in.next();
-        } else {
-            throw new CalculatorException();
-        }
+        args[0] = in.next();
+        args[1] = in.next();
+        args[2] = in.next();
 
         String result = Calculator.execute(args);
         System.out.println(result);
