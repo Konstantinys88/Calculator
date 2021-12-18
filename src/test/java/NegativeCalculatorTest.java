@@ -10,7 +10,7 @@ public class NegativeCalculatorTest {
         Object[][] data = {new Object[]{"5.0", "+", "2", "2"},
                 new Object[]{"200", "-", "-99.999", "99.99"},
                 new Object[]{"", "*", "0", "0"},
-                new Object[]{"", "/", "13", "0"}};
+                new Object[]{"0", "/", "13", "0"}};
         return data;
     }
 

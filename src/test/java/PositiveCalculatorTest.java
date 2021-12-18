@@ -10,7 +10,7 @@ public class PositiveCalculatorTest {
         Object[][] data = {new Object[]{"4.0", "+", "1", "3"},
                 new Object[]{"0.0", "-", "100", "100"},
                 new Object[]{"16.0", "*", "4", "4"},
-                new Object[]{"4.0", "/", "20", "4"}};
+                new Object[]{"5.0", "/", "20", "4"}};
         return data;
     }
 
