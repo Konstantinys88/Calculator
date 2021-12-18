@@ -11,7 +11,8 @@ public class Main {
         args[1] = in.next();
         args[2] = in.next();
 
-        Calculator.execute(args);
+        String result = Calculator.execute(args);
+        System.out.println(result);
 
     }
 }

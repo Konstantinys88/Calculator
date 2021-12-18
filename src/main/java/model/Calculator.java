@@ -30,7 +30,6 @@ public class Calculator {
                     throw new CalculatorException();
 
             }
-            System.out.println("Результат вычисления равен " + result);
             return (String.valueOf(result));
         }
     }
