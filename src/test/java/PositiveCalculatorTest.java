@@ -6,13 +6,11 @@ import org.testng.annotations.Test;
 public class PositiveCalculatorTest {
 
     @DataProvider
-    public static Object[][] positiveDataProvider(){
+    public static Object[][] positiveDataProvider() {
         Object[][] data = {new Object[]{"4.0", "+", "1", "3"},
                 new Object[]{"0.0", "-", "100", "100"},
-                new Object[]{"16.0", "*", "4", "4"}
-
-        };
-
+                new Object[]{"16.0", "*", "4", "4"},
+                new Object[]{"4.0", "/", "16", "4"}};
         return data;
     }
 
