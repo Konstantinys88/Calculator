@@ -9,18 +9,18 @@ public class Calculator {
             throw new CalculatorException();
         } else {
             double result;
-            char a = params[0].charAt(0);
-            switch (a) {
-                case ('+'):
+            //char a = params[0].charAt(0);
+            switch (params[0]) {
+                case ("+"):
                     result = Double.parseDouble(params[1]) + Double.parseDouble(params[2]);
                     break;
-                case ('-'):
+                case ("-"):
                     result = Double.parseDouble(params[1]) - Double.parseDouble(params[2]);
                     break;
-                case ('*'):
+                case ("*"):
                     result = Double.parseDouble(params[1]) * Double.parseDouble(params[2]);
                     break;
-                case ('/'):
+                case ("/"):
                     if (Double.parseDouble(params[2]) == 0) {
                         throw new CalculatorException();
                     } else
