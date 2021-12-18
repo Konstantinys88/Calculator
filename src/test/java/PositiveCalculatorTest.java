@@ -6,18 +6,20 @@ import org.testng.annotations.Test;
 public class PositiveCalculatorTest {
 
     @DataProvider
-    public static Object[][] positiveDataProvider() {
-        Object[][] data = {new Object[]{"4.0", "+", "1", "3"},
-                new Object[]{"0.0", "-", "100", "100"},
-                new Object[]{"16.0", "*", "4", "4"},
-                new Object[]{"5.0", "/", "20", "4"}};
-        return data;
+    public Object[][] positiveData() {
+        return new Object[][]{
+                {"+", "3", "2", "5.0"},
+                {"-", "100", "-1", "101.0"},
+                {"*", "4", "4", "16.0"},
+                {"/", "10", "2", "5.0"}};
     }
 
-    @Test(dataProvider = "positiveDataProvider")
-    public void positiveTest(String result, String[] arr) {
-        Assert.assertEquals(result, Calculator.execute(arr));
+    @Test(dataProvider = "positiveData")
+    public void positiveTest(String operation, String valueOne, String valueTwo, String result) {
+        String actual = Calculator.execute(new String[]{operation, valueOne, valueTwo, result});
+        Assert.assertEquals(actual, result);
     }
+
 }
 
 

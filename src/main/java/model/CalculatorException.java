@@ -1,6 +1,6 @@
 package model;
 
-public class CalculatorException extends RuntimeException{
+public class CalculatorException extends RuntimeException {
     public CalculatorException() {
     }
 
